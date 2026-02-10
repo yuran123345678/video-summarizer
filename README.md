@@ -48,9 +48,26 @@ pip install openai-whisper
 4. **文件重命名**：根据视频标题批量重命名
 5. **生成总结**：基于校正后的文字稿生成结构化总结
 
+## 项目说明
+
+本项目是基于 [video-copy-analyzer](https://github.com/ALBEDO-TABAI/video-copy-analyzer) 项目进行二次开发的版本。
+
+**主要改进和优化：**
+
+1. **优化字幕提取流程**：采用三层优先级智能提取策略（内嵌字幕 → RapidOCR 烧录字幕识别 → FunASR 语音转录）
+2. **增强文稿校正能力**：改进同音字修正、专业术语识别和标点符号补充
+3. **完善总结结构**：新增核心主题、详细大纲、资源汇总等结构化内容维度
+4. **添加文件重命名功能**：支持根据视频标题批量重命名相关文件
+5. **优化中文语音转录**：采用 FunASR Nano 模型，针对中文语音优化，效果优于 Whisper
+6. **简化依赖安装**：整理和优化了 Python 依赖包的安装流程
+
+**感谢原项目作者 ALBEDO-TABAI 的开源贡献！**
+
 ## 致谢
 
-本项目基于 [video-copy-analyzer](https://github.com/yuran123345678/video-copy-analyzer) 进行修改和优化。
+- 原项目：[video-copy-analyzer](https://github.com/ALBEDO-TABAI/video-copy-analyzer) by [ALBEDO-TABAI](https://github.com/ALBEDO-TABAI)
+- FunASR: 阿里巴巴达摩院语音技术实验室
+- RapidOCR: 基于 PaddleOCR 优化的 ONNX 版本
 
 ## 许可证
 
